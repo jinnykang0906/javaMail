@@ -18,7 +18,7 @@ import javax.mail.internet.MimeUtility;
 * @ClassName: Sendmail
 * @Description: 发送Email
 * @author: kang.liu
-* @date: 2015-1-12 下午9:42:56
+* @date: 2016-7-16 下午9:42:56
 *
 */ 
 public class SendMail {
@@ -41,7 +41,7 @@ public class SendMail {
         //2、通过session得到transport对象
         Transport ts = session.getTransport();
         //3、使用邮箱的用户名和密码连上邮件服务器，发送邮件时，发件人需要提交邮箱的用户名和密码给smtp服务器，用户名和密码都通过验证之后才能够正常发送邮件给收件人。
-        ts.connect("smtp.sohu.com", "jinnykang@sohu.com", "liukang090611");
+        ts.connect("smtp.sohu.com", "xxxx", "xxxxx");
         //4、创建邮件
         //Message message = createSimpleMail(session);
         //Message message = createImageMail(session);
@@ -67,9 +67,9 @@ public class SendMail {
         //创建邮件对象
         MimeMessage message = new MimeMessage(session);
         //指明邮件的发件人
-        message.setFrom(new InternetAddress("jinnykang@sohu.com"));
+        message.setFrom(new InternetAddress("xxxx"));
         //指明邮件的收件人，现在发件人和收件人是一样的，那就是自己给自己发
-        message.setRecipient(Message.RecipientType.TO, new InternetAddress("465461578@qq.com"));
+        message.setRecipient(Message.RecipientType.TO, new InternetAddress("xxxxx"));
         //邮件的标题
         message.setSubject("只包含文本的简单邮件");
         //邮件的文本内容
@@ -94,9 +94,9 @@ public class SendMail {
          MimeMessage message = new MimeMessage(session);
          // 设置邮件的基本信息
          //发件人
-         message.setFrom(new InternetAddress("jinnykang@sohu.com"));
+         message.setFrom(new InternetAddress("xxxx"));
          //收件人
-         message.setRecipient(Message.RecipientType.TO, new InternetAddress("465461578@qq.com"));
+         message.setRecipient(Message.RecipientType.TO, new InternetAddress("xxxxx"));
          //邮件标题
          message.setSubject("带图片的邮件");
 
@@ -142,9 +142,9 @@ public class SendMail {
           
           //设置邮件的基本信息
           //发件人
-          message.setFrom(new InternetAddress("jinnykang@sohu.com"));
+          message.setFrom(new InternetAddress("xxxx"));
           //收件人
-          message.setRecipient(Message.RecipientType.TO, new InternetAddress("465461578@qq.com"));
+          message.setRecipient(Message.RecipientType.TO, new InternetAddress("xxxxx"));
           //邮件标题
           message.setSubject("JavaMail邮件发送测试");
           
